@@ -16,20 +16,20 @@ class PaymentDetailList extends StatelessWidget {
       SizedBox(
         height: SizeConfig.blockSizeVertical * 5,
       ),
-      Container(
-        decoration:
-            BoxDecoration(borderRadius: BorderRadius.circular(30), boxShadow: [
-          BoxShadow(
-            color: Colors.grey[400],
-            blurRadius: 15.0,
-            offset: const Offset(
-              10.0,
-              15.0,
-            ),
-          )
-        ]),
-        child: Image.asset('assets/card.png'),
-      ),
+      // Container(
+      //   decoration:
+      //       BoxDecoration(borderRadius: BorderRadius.circular(30), boxShadow: [
+      //     BoxShadow(
+      //       color: Colors.grey[400],
+      //       blurRadius: 15.0,
+      //       offset: const Offset(
+      //         10.0,
+      //         15.0,
+      //       ),
+      //     )
+      //   ]),
+      //   child: Image.asset('assets/card.png'),
+      // ),
       SizedBox(
         height: SizeConfig.blockSizeVertical * 5,
       ),
@@ -37,7 +37,10 @@ class PaymentDetailList extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           PrimaryText(
-              text: 'Recent Activities', size: 18, fontWeight: FontWeight.w800),
+            text: 'Recent Activities',
+            size: 18,
+            fontWeight: FontWeight.w800,
+          ),
           PrimaryText(
             text: '02 Mar 2021',
             size: 14,

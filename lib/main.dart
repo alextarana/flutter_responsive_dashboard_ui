@@ -12,10 +12,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Casper - Digitization Platform by Sentric',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: AppColors.primaryBg
+        scaffoldBackgroundColor: AppColors.primaryBg,
       ),
       home: Dashboard(),
     );

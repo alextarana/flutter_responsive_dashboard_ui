@@ -1,7 +1,10 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_dashboard/config/size_config.dart';
 import 'package:responsive_dashboard/style/colors.dart';
+import 'package:responsive_dashboard/style/style.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
@@ -17,21 +20,20 @@ class SideMenu extends StatelessWidget {
         height: SizeConfig.screenHeight,
         decoration: BoxDecoration(color: AppColors.secondaryBg),
         child: SingleChildScrollView(
-                  child: Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-             Container(
-               height: 100,
-               alignment: Alignment.topCenter,
-               width: double.infinity,
-               padding: EdgeInsets.only(top: 20),
-               child: SizedBox(
-                    width: 35,
-                    height: 20,
-                    child: SvgPicture.asset('assets/mac-action.svg'),
-                  ),
-             ),
-            
+              Container(
+                height: 100,
+                alignment: Alignment.topCenter,
+                width: double.infinity,
+                padding: EdgeInsets.only(top: 20),
+                child: PrimaryText(
+                  text: 'Casper',
+                  size: 30,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
               IconButton(
                   iconSize: 20,
                   padding: EdgeInsets.symmetric(vertical: 20.0),

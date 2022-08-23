@@ -101,7 +101,7 @@ class Dashboard extends StatelessWidget {
                                   color: AppColors.secondary,
                                 ),
                                 PrimaryText(
-                                    text: '\$1500',
+                                    text: '1500 Products',
                                     size: 30,
                                     fontWeight: FontWeight.w800),
                               ],
