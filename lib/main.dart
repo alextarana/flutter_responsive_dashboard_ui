@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Casper - Digitization Platform by Sentric',
       theme: ThemeData(
+        useMaterial3: true,
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: AppColors.primaryBg,
       ),

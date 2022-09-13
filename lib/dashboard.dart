@@ -11,7 +11,12 @@ import 'package:responsive_dashboard/config/size_config.dart';
 import 'package:responsive_dashboard/style/colors.dart';
 import 'package:responsive_dashboard/style/style.dart';
 
-class Dashboard extends StatelessWidget {
+class Dashboard extends StatefulWidget {
+  @override
+  State<Dashboard> createState() => _DashboardState();
+}
+
+class _DashboardState extends State<Dashboard> {
   GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
 
   @override
@@ -47,7 +52,7 @@ class Dashboard extends StatelessWidget {
                 child: SideMenu(),
               ),
             Expanded(
-                flex: 10,
+                flex: 14,
                 child: SafeArea(
                   child: SingleChildScrollView(
                     padding: EdgeInsets.symmetric(vertical: 30, horizontal: 30),
@@ -132,7 +137,7 @@ class Dashboard extends StatelessWidget {
                                 size: 30,
                                 fontWeight: FontWeight.w800),
                             PrimaryText(
-                              text: 'Transaction of lat 6 month',
+                              text: 'Digitizations of last 6 month',
                               size: 16,
                               fontWeight: FontWeight.w400,
                               color: AppColors.secondary,
@@ -148,27 +153,27 @@ class Dashboard extends StatelessWidget {
                     ),
                   ),
                 )),
-            if (Responsive.isDesktop(context))
-              Expanded(
-                flex: 4,
-                child: SafeArea(
-                  child: Container(
-                    width: double.infinity,
-                    height: SizeConfig.screenHeight,
-                    decoration: BoxDecoration(color: AppColors.secondaryBg),
-                    child: SingleChildScrollView(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 30, horizontal: 30),
-                      child: Column(
-                        children: [
-                          AppBarActionItems(),
-                          PaymentDetailList(),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+            // if (Responsive.isDesktop(context))
+            //   Expanded(
+            //     flex: 4,
+            //     child: SafeArea(
+            //       child: Container(
+            //         width: double.infinity,
+            //         height: SizeConfig.screenHeight,
+            //         decoration: BoxDecoration(color: AppColors.secondaryBg),
+            //         child: SingleChildScrollView(
+            //           padding:
+            //               EdgeInsets.symmetric(vertical: 30, horizontal: 30),
+            //           child: Column(
+            //             children: [
+            //               AppBarActionItems(),
+            //               PaymentDetailList(),
+            //             ],
+            //           ),
+            //         ),
+            //       ),
+            //     ),
+            //   ),
           ],
         ),
       ),

@@ -13,13 +13,15 @@ class HistoryTable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      scrollDirection: Responsive.isDesktop(context) ? Axis.vertical : Axis.horizontal,
-          child: SizedBox(
-            width: Responsive.isDesktop(context) ? double.infinity : SizeConfig.screenWidth,
-            child: Table(
-        defaultVerticalAlignment:
-              TableCellVerticalAlignment.middle,
-        children: List.generate(
+      scrollDirection:
+          Responsive.isDesktop(context) ? Axis.vertical : Axis.horizontal,
+      child: SizedBox(
+        width: Responsive.isDesktop(context)
+            ? double.infinity
+            : SizeConfig.screenWidth,
+        child: Table(
+          defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+          children: List.generate(
             transactionHistory.length,
             (index) => TableRow(
               decoration: BoxDecoration(
@@ -28,10 +30,12 @@ class HistoryTable extends StatelessWidget {
               children: [
                 Container(
                   alignment: Alignment.centerLeft,
-                  padding: const EdgeInsets.only(top: 10.0, bottom: 10.0, left: 20.0),
+                  padding: const EdgeInsets.only(
+                      top: 10.0, bottom: 10.0, left: 20.0),
                   child: CircleAvatar(
                     radius: 17,
-                    backgroundImage: NetworkImage(transactionHistory[index]["avatar"]),
+                    backgroundImage:
+                        NetworkImage(transactionHistory[index]["avatar"]),
                   ),
                 ),
                 PrimaryText(
@@ -52,17 +56,20 @@ class HistoryTable extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                   color: AppColors.secondary,
                 ),
-                PrimaryText(
-                  text: transactionHistory[index]["status"],
-                  size: 16,
-                  fontWeight: FontWeight.w400,
-                  color: AppColors.secondary,
+                Chip(
+                  backgroundColor: AppColors.greenSuccess,
+                  label: PrimaryText(
+                    text: transactionHistory[index]["status"],
+                    size: 16,
+                    fontWeight: FontWeight.w400,
+                    color: AppColors.white,
+                  ),
                 ),
               ],
             ),
+          ),
         ),
       ),
-          ),
     );
   }
 }
