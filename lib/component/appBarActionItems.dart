@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:responsive_dashboard/style/colors.dart';
-import 'package:responsive_dashboard/style/style.dart';
+import 'package:casper/style/colors.dart';
+import 'package:casper/style/style.dart';
 
 class AppBarActionItems extends StatelessWidget {
   const AppBarActionItems({

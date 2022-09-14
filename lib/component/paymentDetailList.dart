@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/component/paymentListTile.dart';
-import 'package:responsive_dashboard/config/size_config.dart';
-import 'package:responsive_dashboard/data.dart';
-import 'package:responsive_dashboard/style/colors.dart';
-import 'package:responsive_dashboard/style/style.dart';
+import 'package:casper/component/paymentListTile.dart';
+import 'package:casper/config/size_config.dart';
+import 'package:casper/data.dart';
+import 'package:casper/style/colors.dart';
+import 'package:casper/style/style.dart';
 
 class PaymentDetailList extends StatelessWidget {
   const PaymentDetailList({

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/style/colors.dart';
+import 'package:casper/style/colors.dart';
 
 class PrimaryText extends StatelessWidget {
   final double size;

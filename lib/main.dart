@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/dashboard.dart';
-import 'package:responsive_dashboard/style/colors.dart';
+import 'package:casper/dashboard.dart';
+import 'package:casper/style/colors.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Casper - Digitization Platform by Sentric',
       theme: ThemeData(
         useMaterial3: true,
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
         scaffoldBackgroundColor: AppColors.primaryBg,
       ),
       home: Dashboard(),
